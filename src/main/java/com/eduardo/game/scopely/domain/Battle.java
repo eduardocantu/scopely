@@ -21,10 +21,18 @@ public class Battle {
   public Battle start() {
     synchronized (requester) {
       synchronized (opponent) {
-        runBattle();
+        // TODO: implement something to wait the user to interact
+        //
+        finishBattle();
       }
     }
     return this;
+  }
+
+  public Player attack(Player attacker, Player defender) {
+   Integer damage = attacker.getHitPoints();
+
+   return defender;
   }
 
   public Player getRequester() {
@@ -47,7 +55,7 @@ public class Battle {
     return result;
   }
 
-  private void runBattle() {
+  private void finishBattle() {
     this.winner = requester;
     this.looser = opponent;
 

@@ -20,6 +20,7 @@ public class PlayersController {
 
   PlayersService playersService;
 
+  // TODO: Implement auth
   @PostMapping("/players")
   public ResponseEntity<CreatePlayerResponse> create(@RequestBody @Valid CreatePlayerRequest player,
       BindingResult bindingResult) {

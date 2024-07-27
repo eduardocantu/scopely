@@ -20,6 +20,7 @@ public class BattleController {
     this.playersService = playersService;
   }
 
+  // TODO: Implement auth
   @PostMapping("/battles")
   public ResponseEntity<String> submitBattle(@RequestBody SubmitBattleRequest submitBattleRequest) {
     battleRequester.request(toBattle(submitBattleRequest));
